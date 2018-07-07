@@ -1,0 +1,23 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/logo.svg">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
+<ion-header>
+  <ion-navbar class="ww">
+    <ion-title><span text-color="my-custom-color">RULBOX</span></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   
+      <ion-item id="hello" *ngFor="let c of countries">
+          <ion-option [value]="c" *ngIf="c.id == 2">
+            <h1 text-center><span class="value">{{c.value}} cm</span></h1>
+          </ion-option>
+      </ion-item>
+         
+</ion-content>
